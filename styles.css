@@ -1,0 +1,141 @@
+body {
+    background: url('https://img.freepik.com/free-vector/detailed-hand-painted-pink-watercolour-background_1048-17039.jpg') no-repeat center center fixed, pink;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 192, 203, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.moving-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    animation: moveText 5s linear infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.heart {
+    font-size: 5em;
+    margin: 20px 0;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: white;
+    border: 2px solid hotpink;
+    color: hotpink;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: hotpink;
+    color: white;
+}
+
+.response {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#yes-image {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    border: 5px solid hotpink;
+    border-radius: 15px;
+    animation: glow 1s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px hotpink; }
+    50% { box-shadow: 0 0 20px hotpink; }
+    100% { box-shadow: 0 0 5px hotpink; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .moving-text {
+        font-size: 2em;
+    }
+
+    .heart {
+        font-size: 4em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .response {
+        font-size: 1.2em;
+    }
+
+    #yes-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .moving-text {
+        font-size: 1.5em;
+    }
+
+    .heart {
+        font-size: 3em;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .response {
+        font-size: 1em;
+    }
+
+    #yes-image {
+        width: 90%;
+    }
+}

@@ -1,0 +1,71 @@
+body {
+    background: url('https://img.lovepik.com/photo/40108/8363.jpg_wh860.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 192, 203, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.moving-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: moveText 5s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+#love-image {
+    display: block;
+    margin: 20px auto;
+    width: 40%;
+    border: 5px solid hotpink;
+    border-radius: 20px;
+    animation: glow 1s infinite;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px hotpink; }
+    50% { box-shadow: 0 0 20px hotpink; }
+    100% { box-shadow: 0 0 5px hotpink; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .moving-text {
+        font-size: 1.2em;
+    }
+
+    #love-image {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .moving-text {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    #love-image {
+        width: 70%;
+        border-radius: 15px;
+    }
+}
