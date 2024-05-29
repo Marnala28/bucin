@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You're My Girlfriend Now!</title>
     <link rel="stylesheet" href="yes.css">
+    <style>
+        .whatsapp-button {
+            background-color: pink;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .moving-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,7 +34,17 @@
             Kamu jadi pacar abangg sekarangg tanggal 29-05-2024 💖💖💖
         </h1>
         <img id="love-image" src="https://i.pinimg.com/474x/18/72/6c/18726c94f37ab15af91e59a7dc9630cb.jpg" alt="Love Image">
+        <button class="whatsapp-button" onclick="sendWhatsAppMessage()">Klik Aku!</button>
     </div>
     <audio id="background-music" src="Y2meta.app - Marry You (Bruno Mars) (128 kbps).mp3" autoplay loop></audio>
+
+    <script>
+        function sendWhatsAppMessage() {
+            var phoneNumber = '6285174318971'; // Ganti dengan nomor tujuan (format: 62 untuk Indonesia)
+            var message = 'Aku mau jadi pacar abang';
+            var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>
